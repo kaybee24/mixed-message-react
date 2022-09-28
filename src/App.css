@@ -30,14 +30,6 @@ p {
   font-size: 1.5rem;
 }
 
-button {
-  margin: 2rem;
-}
-
-img {
-  width: 50%;
-  height: 50%;
-}
 
 
 @keyframes logo-spin {

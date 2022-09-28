@@ -1,25 +1,25 @@
 import { useState } from 'react';
 import { statementList } from './data';
-import Buttons from './components/Buttons';
 import './App.css'
 
 function App() {
   const [index, setIndex] = useState(0);
 
-  function handleRandom() {
-    Math.floor(Math.random() * id.length)
-    return id[handleRandom]
-  }
+  let statement = statementList[index];
+  let hasPrev = index > 0;
+  let hasNext = index < statementList.length - 1;
 
   function handlePrevClick() {
-    setIndex(index + 1);
+    setIndex(index - 1);
   }
 
   function handleNextClick() {
     setIndex(index + 1);
   }
 
-  let statement = statementList[index];
+  function handleRandom() {
+    setIndex(Math.floor(Math.random() * statementList.length))
+  }
 
   return (
     <>
@@ -33,14 +33,19 @@ function App() {
         {statement.name}
       </h2>
       <div>
-        <button onClick={handlePrevClick}>
-          Previous
+        <button
+          onClick={handlePrevClick}
+          disabled={!hasPrev}>
+          &#8592;
         </button>
-        <button onClick={handleRandom}>
-          Random Quote
+        <button
+          onClick={handleRandom}>
+          &#8596;
         </button>
-        <button onClick={handleNextClick}>
-          Next
+        <button
+          onClick={handleNextClick}
+          disabled={!hasNext}>
+          &#8594;
         </button>
         <h3>
           ({index + 1} of {statementList.length})
