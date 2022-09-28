@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { statementList } from './data';
-import './App.css'
+import './App.css';
+import './styles.css';
 
 function App() {
   const [index, setIndex] = useState(0);
@@ -22,7 +23,7 @@ function App() {
   }
 
   return (
-    <>
+    <div class="container">
       <p>
         {statement.quote}
       </p>
@@ -47,11 +48,11 @@ function App() {
           disabled={!hasNext}>
           &#8594;
         </button>
-        <h3>
+        <p className="small">
           ({index + 1} of {statementList.length})
-        </h3>
+        </p>
       </div>
-    </>
+    </div>
   )
 }
 
