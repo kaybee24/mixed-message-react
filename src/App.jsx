@@ -23,29 +23,29 @@ function App() {
   }
 
   return (
-    <div class="container text-gray-900 max-h-full ">
-      <div class="grid">
-        <div class="grid md:grid-rows-5 md:grid-cols-4 gap-4 bg-gray-900">
-          <div class="bg-slate-400 md:col-span-2 md:row-span-6 trim-1"><img
-            class="object-none"
+    <div className="container text-gray-900 max-h-full ">
+      <div className="grid">
+        <div className="grid md:grid-rows-5 md:grid-cols-4 gap-4 bg-gray-900">
+          <div className="bg-slate-400 md:col-span-2 md:row-span-6 trim-1"><img
+            className="object-none"
             src={statement.url1}
           /></div>
-          <div class="p-5 grid-cols-2 md:row-span-2 bg-white">
-            <p class="text-2xl text-left leading-snug uppercase">
+          <div className="p-5 grid-cols-2 md:row-span-2 bg-white">
+            <p className="text-2xl text-left leading-snug uppercase">
               {statement.quote}
             </p>
           </div>
-          <div class="bg-slate-400 grid-cols-2 md:row-span-2 trim-2"><img
-            class="object-none"
+          <div className="bg-slate-400 grid-cols-2 md:row-span-2 trim-2"><img
+            className="object-none"
             src={statement.url2}
           /></div>
-          <div class="md:col-span-2 bg-white">
-            <h2 class="text-8xl font-bold tracking-widest uppercase">
+          <div className="md:col-span-2 bg-white">
+            <h2 className="text-8xl font-bold tracking-widest uppercase">
               {statement.name}
             </h2>
           </div>
-          <div class="bg-slate-400 md:col-span-2 md:row-span-2 bg-white trim-3"><img
-            class="object-none"
+          <div className="bg-slate-400 md:col-span-2 md:row-span-2 bg-white trim-3"><img
+            className="object-none"
             src={statement.url3}
           />
           </div>
